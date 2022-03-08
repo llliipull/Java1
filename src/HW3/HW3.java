@@ -58,7 +58,36 @@ public class HW3 {
         System.out.println();
         printArray(fifthArray(3, 22));
 
+        System.out.println();
+        Random random = new Random();
+        int[] sixthArray = new int[7];
+        for(int i = 0; i < sixthArray.length; i++){
+            sixthArray[i] = random.nextInt(999);
+        }
+        System.out.println("max is " + maxValue(sixthArray));
+        System.out.println("min is " + minValue(sixthArray));
+
     }
+
+        public static int maxValue (int[] array){
+            int max = 0;
+            for ( int i = 0; i < array.length; i++){
+                if (array[i] > max){
+                    max = array[i];
+                }
+            }
+            return max;
+        }
+
+        public static int minValue (int[] array){
+        int min = 999;
+        for ( int i = 0; i < array.length; i++){
+            if (array[i] < min){
+                min = array[i];
+            }
+        }
+        return min;
+        }
 
         public static void printArray(int[] array){
             for (int i = 0; i < array.length; i++) {
